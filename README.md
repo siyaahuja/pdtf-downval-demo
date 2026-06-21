@@ -1,7 +1,5 @@
 # PDTF down-valuation reference implementation
 
-By Siya Ahuja
-
 A small, runnable reference implementation showing how a **down-valuation assessment** can be derived from authoritative public property data and expressed on the Property Data Trust Framework (PDTF) v3 schema, with provenance attached to every input.
 
 It is built against the published `@pdtf/schemas` package (v3.5.0) and validates against the live base schema.
