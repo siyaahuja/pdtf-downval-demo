@@ -1,0 +1,83 @@
+{
+  "properties": {
+    "propertyPack": {
+      "properties": {
+        "valuations": {
+          "items": {
+            "properties": {
+              "downValuation": {
+                "type": "object",
+                "title": "Down-valuation assessment",
+                "$comment": "Derived comparison between an agreed price and a lending or comparable valuation. Provenance for each input is carried on the associated PDTF verified claims, not inside this object.",
+                "properties": {
+                  "isDownValued": {
+                    "type": "boolean",
+                    "title": "Is the property down-valued?",
+                    "description": "True when the valuation figure is below the agreed price reference."
+                  },
+                  "priceReference": {
+                    "type": "object",
+                    "title": "Agreed price reference",
+                    "description": "Pointer to the price claim this assessment was compared against.",
+                    "properties": {
+                      "path": {
+                        "type": "string",
+                        "title": "JSON pointer to the price claim",
+                        "description": "For example /propertyPack/priceInformation/price"
+                      },
+                      "value": {
+                        "type": "integer",
+                        "title": "Agreed price value used in the comparison"
+                      }
+                    },
+                    "required": ["path", "value"]
+                  },
+                  "valuationFigure": {
+                    "type": "integer",
+                    "title": "Valuation figure used in the comparison",
+                    "description": "Normally mirrors the parent valuation capitalValue."
+                  },
+                  "downValuationAmount": {
+                    "type": "integer",
+                    "title": "Down-valuation amount",
+                    "description": "Agreed price value minus valuation figure. Positive when down-valued."
+                  },
+                  "downValuationPercentage": {
+                    "type": "number",
+                    "title": "Down-valuation percentage",
+                    "description": "Down-valuation amount as a percentage of the agreed price value."
+                  },
+                  "riskBand": {
+                    "type": "string",
+                    "title": "Down-valuation risk band",
+                    "enum": ["none", "low", "medium", "high"]
+                  },
+                  "riskFactors": {
+                    "type": "array",
+                    "title": "Contributing risk factors",
+                    "items": { "type": "string" }
+                  },
+                  "methodology": {
+                    "type": "string",
+                    "title": "Methodology note",
+                    "description": "Short description of how the comparable valuation was derived."
+                  }
+                },
+                "required": [
+                  "isDownValued",
+                  "valuationFigure",
+                  "downValuationAmount",
+                  "downValuationPercentage",
+                  "riskBand"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://trust.propdata.org.uk/schemas/v3/overlays/extensions/dv.json",
+  "$comment": "Down-valuation risk assessment derived from an agreed price and a comparable or lending valuation"
+}

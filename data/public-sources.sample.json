@@ -1,0 +1,31 @@
+{
+  "_note": "Illustrative sample inputs only. Values are synthetic and do not describe a real property. In a live ingester these fields are populated from authoritative public sources via their APIs.",
+  "subjectProperty": {
+    "uprn": "100023336956",
+    "address": {
+      "line1": "Flat 12, Examplary Wharf",
+      "postTown": "London",
+      "postcode": "E16 0AA"
+    },
+    "isNewBuild": true,
+    "offPlanLaunchPrice": 650000,
+    "agreedPrice": 640000,
+    "epc": {
+      "currentRating": "B",
+      "lmkKey": "1234567890123456789012345678901234567890",
+      "lodgementDate": "2024-09-02",
+      "source": "EPC Register (Open Data Communities)"
+    }
+  },
+  "landRegistryComparables": {
+    "source": "HM Land Registry Price Paid Data (Open Government Licence v3.0)",
+    "retrievedAt": "2026-06-10T09:00:00Z",
+    "selectionBasis": "Same scheme and postcode sector, flats, trailing 18 months",
+    "records": [
+      { "transactionId": "{8A1F...0001}", "pricePaid": 575000, "deedDate": "2025-11-14", "propertyType": "F", "newBuild": false },
+      { "transactionId": "{8A1F...0002}", "pricePaid": 560000, "deedDate": "2025-09-30", "propertyType": "F", "newBuild": false },
+      { "transactionId": "{8A1F...0003}", "pricePaid": 590000, "deedDate": "2026-01-22", "propertyType": "F", "newBuild": false },
+      { "transactionId": "{8A1F...0004}", "pricePaid": 568000, "deedDate": "2026-03-05", "propertyType": "F", "newBuild": false }
+    ]
+  }
+}

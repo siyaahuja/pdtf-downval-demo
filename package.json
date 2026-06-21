@@ -1,0 +1,17 @@
+{
+  "name": "pdtf-downval-demo",
+  "version": "0.1.0",
+  "description": "Reference implementation: deriving a provenance-tracked down-valuation assessment on the PDTF v3 schema from public property data.",
+  "license": "MIT",
+  "scripts": {
+    "ingest": "node src/ingest.js",
+    "validate": "node src/validate.js",
+    "demo": "node src/ingest.js && node src/validate.js"
+  },
+  "dependencies": {
+    "@pdtf/schemas": "^3.5.0",
+    "ajv": "^8.12.0",
+    "ajv-formats": "^2.1.1",
+    "deepmerge": "^4.3.1"
+  }
+}

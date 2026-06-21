@@ -1,0 +1,119 @@
+[
+  {
+    "id": "claim-propertypack-priceinformation-price",
+    "transactionId": "txn-downval-demo-0001",
+    "schemaVersion": "3.5.0",
+    "timestamp": 1781973103116,
+    "verification": {
+      "trust_framework": "uk_pdtf",
+      "time": "2026-06-20T16:31:43.116Z",
+      "evidence": [
+        {
+          "type": "vouch",
+          "attestation": {
+            "type": "digital_attestation",
+            "voucher": {
+              "name": "Selling agent, memorandum of sale"
+            }
+          },
+          "verification_method": {
+            "type": "auth"
+          }
+        }
+      ]
+    },
+    "claims": {
+      "/propertyPack/priceInformation/price": 640000
+    }
+  },
+  {
+    "id": "claim-propertypack-priceinformation-pricequalifier",
+    "transactionId": "txn-downval-demo-0001",
+    "schemaVersion": "3.5.0",
+    "timestamp": 1781973103116,
+    "verification": {
+      "trust_framework": "uk_pdtf",
+      "time": "2026-06-20T16:31:43.116Z",
+      "evidence": [
+        {
+          "type": "vouch",
+          "attestation": {
+            "type": "digital_attestation",
+            "voucher": {
+              "name": "Selling agent, memorandum of sale"
+            }
+          },
+          "verification_method": {
+            "type": "auth"
+          }
+        }
+      ]
+    },
+    "claims": {
+      "/propertyPack/priceInformation/priceQualifier": "Offers in excess of"
+    }
+  },
+  {
+    "id": "claim-propertypack-valuations-0",
+    "transactionId": "txn-downval-demo-0001",
+    "schemaVersion": "3.5.0",
+    "timestamp": 1781973103116,
+    "verification": {
+      "trust_framework": "uk_pdtf",
+      "time": "2026-06-20T16:31:43.116Z",
+      "evidence": [
+        {
+          "type": "record",
+          "record": {
+            "type": "open_data",
+            "source": "HM Land Registry Price Paid Data (Open Government Licence v3.0)",
+            "retrievedAt": "2026-06-10T09:00:00Z",
+            "references": [
+              "{8A1F...0001}",
+              "{8A1F...0002}",
+              "{8A1F...0003}",
+              "{8A1F...0004}"
+            ]
+          }
+        },
+        {
+          "type": "record",
+          "record": {
+            "type": "open_data",
+            "source": "EPC Register (Open Data Communities)",
+            "reference": "1234567890123456789012345678901234567890",
+            "retrievedAt": "2024-09-02"
+          }
+        }
+      ]
+    },
+    "claims": {
+      "/propertyPack/valuations/0": {
+        "valuationId": 1,
+        "valuationTimestamp": "2026-06-20T16:31:43.116Z",
+        "capitalValue": 571500,
+        "confidenceLevel": 0.7,
+        "confidenceBand": "medium",
+        "valuationType": "Comparable evidence (automated)",
+        "valuationContext": "Pre-offer down-valuation risk screen",
+        "checkValuationResult": "Below agreed price",
+        "downValuation": {
+          "isDownValued": true,
+          "priceReference": {
+            "path": "/propertyPack/priceInformation/price",
+            "value": 640000
+          },
+          "valuationFigure": 571500,
+          "downValuationAmount": 68500,
+          "downValuationPercentage": 10.7,
+          "riskBand": "high",
+          "riskFactors": [
+            "Off-plan launch price set above local resale comparables",
+            "New-build scheme: launch pricing may embed a developer premium not realised on resale"
+          ],
+          "methodology": "Median of Land Registry Price Paid completions for comparable units in the scheme and postcode sector over the trailing window, compared against the agreed price. Illustrative."
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "propertyPack": {
+    "priceInformation": {
+      "price": 640000,
+      "priceQualifier": "Offers in excess of"
+    },
+    "valuations": [
+      {
+        "valuationId": 1,
+        "valuationTimestamp": "2026-06-20T16:31:43.116Z",
+        "capitalValue": 571500,
+        "confidenceLevel": 0.7,
+        "confidenceBand": "medium",
+        "valuationType": "Comparable evidence (automated)",
+        "valuationContext": "Pre-offer down-valuation risk screen",
+        "checkValuationResult": "Below agreed price",
+        "downValuation": {
+          "isDownValued": true,
+          "priceReference": {
+            "path": "/propertyPack/priceInformation/price",
+            "value": 640000
+          },
+          "valuationFigure": 571500,
+          "downValuationAmount": 68500,
+          "downValuationPercentage": 10.7,
+          "riskBand": "high",
+          "riskFactors": [
+            "Off-plan launch price set above local resale comparables",
+            "New-build scheme: launch pricing may embed a developer premium not realised on resale"
+          ],
+          "methodology": "Median of Land Registry Price Paid completions for comparable units in the scheme and postcode sector over the trailing window, compared against the agreed price. Illustrative."
+        }
+      }
+    ]
+  }
+}
